@@ -1,104 +1,400 @@
-<body style="margin:0;font-family:Georgia,serif;background:#013220;color:#fff;">
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- TOP BAR -->
-<div style="background:#f5f0e6;color:#013220;text-align:center;padding:10px;font-size:12px;letter-spacing:2px;">
+<title>ZAKIÈRA</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#0f2e25;
+color:#f7f1e8;
+}
+
+h1,h2,h3{
+font-family:'Playfair Display',serif;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.topbar{
+background:#f7f1e8;
+color:#0f2e25;
+text-align:center;
+padding:10px;
+font-size:13px;
+letter-spacing:2px;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 40px;
+}
+
+.logo{
+font-size:42px;
+color:#d4af37;
+font-weight:700;
+}
+
+nav a{
+margin-left:25px;
+font-size:15px;
+}
+
+.hero{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+align-items:center;
+padding:70px 40px;
+}
+
+.hero-text{
+max-width:520px;
+}
+
+.hero-text h1{
+font-size:62px;
+margin-bottom:15px;
+}
+
+.hero-text p{
+font-size:18px;
+line-height:1.8;
+}
+
+.buttons{
+margin-top:25px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+border-radius:40px;
+margin-right:15px;
+font-size:15px;
+}
+
+.gold-btn{
+background:#d4af37;
+color:#111111;
+}
+
+.outline-btn{
+border:1px solid #d4af37;
+color:#d4af37;
+}
+
+.hero-image{
+width:360px;
+height:450px;
+background:#f7f1e8;
+border-radius:22px;
+}
+
+.section{
+padding:80px 40px;
+}
+
+.section-cream{
+background:#f7f1e8;
+color:#111111;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:#ffffff;
+border-radius:20px;
+padding:30px;
+width:240px;
+text-align:center;
+transition:0.3s;
+}
+
+.card:hover{
+box-shadow:0 0 20px rgba(212,175,55,.35);
+transform:translateY(-5px);
+}
+
+.product{
+background:white;
+border-radius:20px;
+padding:20px;
+width:230px;
+text-align:center;
+}
+
+.product-image{
+height:250px;
+background:#f7f1e8;
+border-radius:16px;
+margin-bottom:15px;
+}
+
+.price{
+color:#d4af37;
+font-weight:600;
+}
+
+.packaging{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+margin-top:35px;
+}
+
+.package-box{
+width:180px;
+height:180px;
+background:white;
+border-radius:20px;
+}
+
+.community{
+text-align:center;
+padding:90px 20px;
+}
+
+.community h2{
+font-size:52px;
+max-width:800px;
+margin:auto;
+}
+
+footer{
+background:#111111;
+padding:60px 30px;
+text-align:center;
+}
+
+footer a{
+display:block;
+margin:8px 0;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:20px;
+}
+
+.hero{
+text-align:center;
+justify-content:center;
+}
+
+.hero-image{
+margin-top:40px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
 FREE SHIPPING ON ALL ORDERS ABOVE ₹1999
 </div>
 
-<!-- HEADER -->
-<header style="display:flex;justify-content:space-between;align-items:center;padding:20px 30px;">
-<h1 style="margin:0;font-size:44px;color:#d4af37;">ZAKIÈRA</h1>
+<header>
+
+<div class="logo">
+ZAKIÈRA
+</div>
 
 <nav>
-<a href="#" style="color:white;margin:10px;text-decoration:none;">Home</a>
-<a href="#" style="color:white;margin:10px;text-decoration:none;">Shop</a>
-<a href="#" style="color:white;margin:10px;text-decoration:none;">New Arrivals</a>
-<a href="#" style="color:white;margin:10px;text-decoration:none;">Contact</a>
+<a href="#">Home</a>
+<a href="#">Shop</a>
+<a href="#">Collections</a>
+<a href="#">Contact</a>
 </nav>
+
 </header>
 
-<!-- HERO -->
-<section style="text-align:center;padding:60px 20px;">
+<section class="hero">
 
-<img src="public/product1.png"
-style="width:280px;border-radius:20px;">
+<div class="hero-text">
 
-<h2 style="font-size:48px;margin-top:30px;color:#f5f0e6;">
-Luxury That Completes You
-</h2>
+<h1>ZAKIÈRA</h1>
 
-<p style="font-size:18px;color:#f5f0e6;">
-Crafted with elegance. Designed to stand out.
+<p>
+Carry Elegance Everywhere.
 </p>
 
-<button style="
-background:#d4af37;
-border:none;
-padding:15px 35px;
-border-radius:40px;
-font-size:18px;
-margin-top:20px;
-cursor:pointer;
-">
+<p>
+Luxury handbags designed for women who carry confidence.
+</p>
+
+<div class="buttons">
+
+<a href="#" class="btn gold-btn">
 Shop Collection
-</button>
+</a>
+
+<a href="#" class="btn outline-btn">
+Become a ZAKIÉLLE
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image"></div>
 
 </section>
 
-<!-- COLLECTION -->
-<section style="padding:50px 20px;text-align:center;background:#f5f0e6;color:#013220;">
+<section class="section section-cream">
 
-<h2 style="font-size:34px;">
-Shop by Category
+<h2 style="text-align:center;font-size:42px;">
+Featured Collections
 </h2>
 
-<div style="
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-margin-top:30px;
-">
+<div class="cards">
 
-<div>
-<img src="public/product2.png"
-style="width:200px;border-radius:15px;">
-<p>Mini Bags</p>
+<div class="card">
+<h3>Handbags</h3>
+<p>Elegant everyday luxury.</p>
 </div>
 
-<div>
-<img src="public/product3.png"
-style="width:200px;border-radius:15px;">
-<p>Shoulder Bags</p>
+<div class="card">
+<h3>Fancy Purses</h3>
+<p>Made to shine beautifully.</p>
 </div>
 
-<div>
-<img src="public/product4.png"
-style="width:200px;border-radius:15px;">
-<p>Classic Collection</p>
+<div class="card">
+<h3>Limited Editions</h3>
+<p>Exclusive statement pieces.</p>
 </div>
 
 </div>
+
 </section>
 
-<!-- FOOTER -->
-<footer style="
-text-align:center;
-padding:40px;
-background:#013220;
-color:#f5f0e6;
-">
+<section class="section">
 
-<h3 style="color:#d4af37;">
+<h2>The World of ZAKIÈRA</h2>
+
+<p style="max-width:850px;line-height:1.9;font-size:18px;">
+ZAKIÈRA was created to celebrate elegance,
+confidence, and timeless femininity.
+Every piece is carefully selected to make women
+feel luxurious in every moment.
+</p>
+
+<p style="font-size:20px;color:#d4af37;">
+Welcome to the world of the ZAKIÉLLES.
+</p>
+
+</section>
+
+<section class="section section-cream">
+
+<h2 style="text-align:center;">
+Best Sellers
+</h2>
+
+<div class="cards">
+
+<div class="product">
+<div class="product-image"></div>
+<h3>Emerald Grace Bag</h3>
+<p class="price">₹2,499</p>
+<a class="btn gold-btn">Add to Cart</a>
+</div>
+
+<div class="product">
+<div class="product-image"></div>
+<h3>Golden Luxe Purse</h3>
+<p class="price">₹1,999</p>
+<a class="btn gold-btn">Add to Cart</a>
+</div>
+
+<div class="product">
+<div class="product-image"></div>
+<h3>Royal Limited Edition</h3>
+<p class="price">₹3,299</p>
+<a class="btn gold-btn">Add to Cart</a>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 style="text-align:center;">
+Every Order Feels Like A Gift
+</h2>
+
+<div class="packaging">
+
+<div class="package-box"></div>
+<div class="package-box"></div>
+<div class="package-box"></div>
+<div class="package-box"></div>
+
+</div>
+
+</section>
+
+<section class="community">
+
+<h2>
+More Than Customers.
+<br>
+They Are ZAKIÉLLES.
+</h2>
+
+</section>
+
+<footer>
+
+<h2 style="color:#d4af37;">
 ZAKIÈRA
-</h3>
+</h2>
 
-<p>Carry Elegance Everywhere.</p>
+<a href="#">Instagram</a>
+<a href="#">Contact</a>
+<a href="#">Shipping</a>
+<a href="#">Returns</a>
+<a href="#">Terms</a>
 
-<p style="font-size:12px;">
-© 2026 ZAKIÈRA
+<p style="margin-top:20px;">
+Founder of ZAKIÈRA
 </p>
 
 </footer>
 
 </body>
+</html>
+```
