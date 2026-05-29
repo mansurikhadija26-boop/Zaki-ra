@@ -1,2 +1,2 @@
-# Zaki-ra
+# Zakièra
 Official Zakièra luxury handbags website
