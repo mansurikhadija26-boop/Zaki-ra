@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,15 +13,20 @@
 
 <style>
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
-background:#0f2e25;
-color:#f7f1e8;
+background:#f7f1e8;
+color:#0f2e25;
 }
 
 h1,h2,h3{
 font-family:'Playfair Display',serif;
+margin-top:0;
 }
 
 a{
@@ -31,8 +35,8 @@ color:inherit;
 }
 
 .topbar{
-background:#f7f1e8;
-color:#0f2e25;
+background:#0f2e25;
+color:#f7f1e8;
 text-align:center;
 padding:10px;
 font-size:13px;
@@ -41,28 +45,41 @@ letter-spacing:2px;
 
 header{
 display:flex;
-justify-content:space-between;
+flex-direction:column;
 align-items:center;
-padding:25px 40px;
+padding:25px 20px;
+background:#f7f1e8;
 }
 
 .logo img{
-height:70px;
+height:95px;
 width:auto;
 display:block;
+margin-bottom:18px;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
 }
 
 nav a{
-margin-left:25px;
+color:#0f2e25;
 font-size:15px;
+font-weight:500;
 }
 
 .hero{
 display:flex;
 flex-wrap:wrap;
-justify-content:space-between;
+justify-content:center;
 align-items:center;
-padding:70px 40px;
+gap:40px;
+padding:70px 30px;
+background:#0f2e25;
+color:#f7f1e8;
 }
 
 .hero-text{
@@ -71,7 +88,6 @@ max-width:520px;
 
 .hero-text h1{
 font-size:62px;
-margin-bottom:15px;
 }
 
 .hero-text p{
@@ -87,13 +103,13 @@ margin-top:25px;
 display:inline-block;
 padding:14px 30px;
 border-radius:40px;
-margin-right:15px;
+margin:8px;
 font-size:15px;
 }
 
 .gold-btn{
 background:#d4af37;
-color:#111111;
+color:#0f2e25;
 }
 
 .outline-btn{
@@ -104,54 +120,51 @@ color:#d4af37;
 .hero-image{
 width:360px;
 height:450px;
-background:#f7f1e8;
+background:#ffffff;
 border-radius:22px;
 }
 
 .section{
-padding:80px 40px;
-}
-
-.section-cream{
-background:#f7f1e8;
-color:#111111;
+padding:75px 25px;
 }
 
 .cards{
 display:flex;
 flex-wrap:wrap;
+gap:25px;
 justify-content:center;
-gap:30px;
-margin-top:40px;
 }
 
 .card{
 background:#ffffff;
+color:#0f2e25;
 border-radius:20px;
 padding:30px;
 width:240px;
 text-align:center;
-transition:0.3s;
-}
-
-.card:hover{
-box-shadow:0 0 20px rgba(212,175,55,.35);
-transform:translateY(-5px);
 }
 
 .product{
-background:white;
+background:#ffffff;
 border-radius:20px;
-padding:20px;
-width:230px;
+padding:25px;
+width:250px;
 text-align:center;
 }
 
 .product-image{
 height:250px;
-background:#f7f1e8;
+background:#ece7dd;
 border-radius:16px;
 margin-bottom:15px;
+}
+
+.product h3{
+color:#0f2e25;
+}
+
+.product p{
+color:#0f2e25;
 }
 
 .price{
@@ -159,34 +172,46 @@ color:#d4af37;
 font-weight:600;
 }
 
-.packaging{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:25px;
-margin-top:35px;
+.wishlist{
+margin-top:10px;
+color:#d4af37;
+font-size:18px;
 }
 
-.package-box{
-width:180px;
-height:180px;
-background:white;
+.product button{
+background:#d4af37;
+color:#0f2e25;
+border:none;
+padding:12px 22px;
+border-radius:30px;
+margin-top:12px;
+cursor:pointer;
+}
+
+.info-box{
+background:#ffffff;
+color:#0f2e25;
+padding:25px;
 border-radius:20px;
+margin:20px auto;
+max-width:900px;
+line-height:1.8;
 }
 
 .community{
+background:#0f2e25;
+color:#f7f1e8;
 text-align:center;
 padding:90px 20px;
 }
 
 .community h2{
 font-size:52px;
-max-width:800px;
-margin:auto;
 }
 
 footer{
 background:#111111;
+color:#f7f1e8;
 padding:60px 30px;
 text-align:center;
 }
@@ -196,23 +221,23 @@ display:block;
 margin:8px 0;
 }
 
+input{
+width:100%;
+padding:14px;
+border-radius:12px;
+border:none;
+margin-top:10px;
+}
+
 @media(max-width:768px){
-
-header{
-flex-direction:column;
-}
-
-nav{
-margin-top:20px;
-}
 
 .hero{
 text-align:center;
-justify-content:center;
 }
 
 .hero-image{
-margin-top:40px;
+width:100%;
+max-width:320px;
 }
 
 }
@@ -233,10 +258,11 @@ FREE SHIPPING ON ALL ORDERS ABOVE ₹1999
 </div>
 
 <nav>
-<a href="#">Home</a>
-<a href="#">Shop</a>
-<a href="#">Collections</a>
-<a href="#">Contact</a>
+<a href="#shop">Shop</a>
+<a href="#collections">Collections</a>
+<a href="#offers">Offers</a>
+<a href="#delivery">Shipping</a>
+<a href="#contact">Contact</a>
 </nav>
 
 </header>
@@ -247,9 +273,7 @@ FREE SHIPPING ON ALL ORDERS ABOVE ₹1999
 
 <h1>ZAKIÈRA</h1>
 
-<p>
-Carry Elegance Everywhere.
-</p>
+<p>Carry Elegance Everywhere.</p>
 
 <p>
 Luxury handbags designed for women who carry confidence.
@@ -257,11 +281,11 @@ Luxury handbags designed for women who carry confidence.
 
 <div class="buttons">
 
-<a href="#" class="btn gold-btn">
+<a href="#shop" class="btn gold-btn">
 Shop Collection
 </a>
 
-<a href="#" class="btn outline-btn">
+<a href="#collections" class="btn outline-btn">
 Become a ZAKIÉLLE
 </a>
 
@@ -273,28 +297,90 @@ Become a ZAKIÉLLE
 
 </section>
 
-<section class="section section-cream">
+<section id="shop" class="section">
 
-<h2 style="text-align:center;font-size:42px;">
-Featured Collections
-</h2>
+<h2 style="text-align:center;">Best Sellers</h2>
 
 <div class="cards">
 
-<div class="card">
-<h3>Handbags</h3>
-<p>Elegant everyday luxury.</p>
+<div class="product">
+
+<div class="product-image"></div>
+
+<h3>Emerald Muse Bag</h3>
+
+<p class="price">₹2,999</p>
+
+<div class="wishlist">♡ Wishlist</div>
+
+<button>Add To Cart</button>
+
+<p>Only 3 Left</p>
+
 </div>
 
-<div class="card">
-<h3>Fancy Purses</h3>
-<p>Made to shine beautifully.</p>
+<div class="product">
+
+<div class="product-image"></div>
+
+<h3>Velvet Charm Purse</h3>
+
+<p class="price">₹1,899</p>
+
+<div class="wishlist">♡ Wishlist</div>
+
+<button>Secure Your Piece</button>
+
+<p>Selling Fast</p>
+
 </div>
 
-<div class="card">
-<h3>Limited Editions</h3>
-<p>Exclusive statement pieces.</p>
 </div>
+
+</section>
+
+<section id="collections" class="section">
+
+<h2 style="text-align:center;">Luxury Collections</h2>
+
+<div class="cards">
+
+<div class="card">Emerald Royale</div>
+<div class="card">Midnight Muse</div>
+<div class="card">Golden Époque</div>
+<div class="card">Noir Élégance</div>
+<div class="card">Royal Bloom</div>
+<div class="card">The Founder’s Edit</div>
+
+</div>
+
+</section>
+
+<section id="offers" class="section">
+
+<h2 style="text-align:center;">Exclusive Offers</h2>
+
+<div class="info-box">
+
+<p>10% off on your first order</p>
+<p>Exclusive rewards for ZAKIÉLLES</p>
+<p>Free delivery above ₹1999</p>
+<p>Limited pieces available</p>
+
+</div>
+
+</section>
+
+<section id="delivery" class="section">
+
+<h2 style="text-align:center;">Shipping Information</h2>
+
+<div class="info-box">
+
+<p>PAN India Delivery 🇮🇳</p>
+<p>Free Shipping Above ₹1999</p>
+<p>Delivery in 5–7 business days</p>
+<p>Secure Payments • UPI • Cards • COD</p>
 
 </div>
 
@@ -302,49 +388,15 @@ Featured Collections
 
 <section class="section">
 
-<h2>The World of ZAKIÈRA</h2>
+<h2 style="text-align:center;">Policies</h2>
 
-<p style="max-width:850px;line-height:1.9;font-size:18px;">
-ZAKIÈRA was created to celebrate elegance,
-confidence, and timeless femininity.
-Every piece is carefully selected to make women
-feel luxurious in every moment.
-</p>
+<div class="info-box">
 
-<p style="font-size:20px;color:#d4af37;">
-Welcome to the world of the ZAKIÉLLES.
-</p>
-
-</section>
-
-<section class="section section-cream">
-
-<h2 style="text-align:center;">
-Best Sellers
-</h2>
-
-<div class="cards">
-
-<div class="product">
-<div class="product-image"></div>
-<h3>Emerald Grace Bag</h3>
-<p class="price">₹2,499</p>
-<a class="btn gold-btn">Add to Cart</a>
-</div>
-
-<div class="product">
-<div class="product-image"></div>
-<h3>Golden Luxe Purse</h3>
-<p class="price">₹1,999</p>
-<a class="btn gold-btn">Add to Cart</a>
-</div>
-
-<div class="product">
-<div class="product-image"></div>
-<h3>Royal Limited Edition</h3>
-<p class="price">₹3,299</p>
-<a class="btn gold-btn">Add to Cart</a>
-</div>
+<p>Refund Policy</p>
+<p>Exchange Policy</p>
+<p>Shipping Policy</p>
+<p>Privacy Policy</p>
+<p>Terms & Conditions</p>
 
 </div>
 
@@ -352,16 +404,15 @@ Best Sellers
 
 <section class="section">
 
-<h2 style="text-align:center;">
-Every Order Feels Like A Gift
-</h2>
+<h2 style="text-align:center;">Search & Filter</h2>
 
-<div class="packaging">
+<div class="info-box">
 
-<div class="package-box"></div>
-<div class="package-box"></div>
-<div class="package-box"></div>
-<div class="package-box"></div>
+<input type="text" placeholder="Search luxury pieces...">
+
+<p>Filter by:</p>
+
+<p>Color • Price • Collection • Style • New Arrivals</p>
 
 </div>
 
@@ -395,286 +446,5 @@ Founder of ZAKIÈRA
 
 </footer>
 
-  ```html
-<!-- HEADER NAVIGATION -->
-
-<header>
-
-<div class="logo">
-<img src="./logo.png" alt="ZAKIÈRA Logo">
-</div>
-
-<nav>
-<a href="#shop">Shop</a>
-<a href="#collections">Collections</a>
-<a href="#offers">Offers</a>
-<a href="#delivery">Shipping</a>
-<a href="#contact">Contact</a>
-</nav>
-
-</header>
-
-<style>
-
-html{
-scroll-behavior:smooth;
-}
-
-nav a{
-margin:12px;
-color:#f7f1e8;
-font-size:16px;
-}
-
-.product{
-background:white;
-border-radius:20px;
-padding:20px;
-width:250px;
-text-align:center;
-}
-
-.product button{
-background:#d4af37;
-border:none;
-padding:12px 20px;
-border-radius:30px;
-margin-top:10px;
-cursor:pointer;
-}
-
-.wishlist{
-margin-top:10px;
-color:#d4af37;
-font-size:18px;
-}
-
-.section{
-padding:70px 25px;
-}
-
-.cards{
-display:flex;
-gap:25px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.info-box{
-background:#f7f1e8;
-color:#111111;
-padding:25px;
-border-radius:20px;
-margin:20px auto;
-max-width:900px;
-}
-
-</style>
-
-<!-- SHOP -->
-
-<section id="shop" class="section">
-
-<h2>Best Sellers</h2>
-
-<div class="cards">
-
-<div class="product">
-
-<div class="product-image"></div>
-
-<h3>Emerald Muse Bag</h3>
-
-<p>₹2,999</p>
-
-<div class="wishlist">♡ Wishlist</div>
-
-<button>Add To Cart</button>
-
-<p>Only 3 Left</p>
-
-</div>
-
-<div class="product">
-
-<div class="product-image"></div>
-
-<h3>Velvet Charm Purse</h3>
-
-<p>₹1,899</p>
-
-<div class="wishlist">♡ Wishlist</div>
-
-<button>Secure Your Piece</button>
-
-<p>Selling Fast</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- COLLECTIONS -->
-
-<section id="collections" class="section">
-
-<h2>Luxury Collections</h2>
-
-<div class="cards">
-
-<div class="card">Emerald Royale</div>
-<div class="card">Midnight Muse</div>
-<div class="card">Golden Époque</div>
-<div class="card">Noir Élégance</div>
-<div class="card">Royal Bloom</div>
-<div class="card">The Founder’s Edit</div>
-
-</div>
-
-</section>
-
-<!-- OFFERS -->
-
-<section id="offers" class="section">
-
-<h2>Exclusive Offers</h2>
-
-<div class="info-box">
-
-<p>10% off on your first order</p>
-
-<p>Exclusive rewards for ZAKIÉLLES</p>
-
-<p>Free delivery above ₹1999</p>
-
-<p>Limited pieces available</p>
-
-</div>
-
-</section>
-
-<!-- DELIVERY -->
-
-<section id="delivery" class="section">
-
-<h2>Shipping Information</h2>
-
-<div class="info-box">
-
-<p>PAN India Delivery 🇮🇳</p>
-
-<p>Free Shipping Above ₹1999</p>
-
-<p>Delivery in 5–7 business days</p>
-
-<p>Secure Payments • UPI • Debit/Credit Cards • COD</p>
-
-</div>
-
-</section>
-
-<!-- POLICIES -->
-
-<section class="section">
-
-<h2>Policies</h2>
-
-<div class="info-box">
-
-<p>Refund Policy</p>
-
-<p>Exchange Policy</p>
-
-<p>Shipping Policy</p>
-
-<p>Privacy Policy</p>
-
-<p>Terms & Conditions</p>
-
-</div>
-
-</section>
-
-<!-- SEARCH + FILTER -->
-
-<section class="section">
-
-<h2>Search & Filter</h2>
-
-<div class="info-box">
-
-<input
-type="text"
-placeholder="Search luxury pieces..."
-style="width:100%;padding:14px;border-radius:12px;">
-
-<p>Filter by:</p>
-
-<p>Color • Price • Collection • Style • New Arrivals</p>
-
-</div>
-
-</section>
-
-<!-- PRODUCT DETAIL -->
-
-<section class="section">
-
-<h2>Product Details</h2>
-
-<div class="info-box">
-
-<p>
-The Emerald Muse Bag is crafted for women
-who carry elegance effortlessly.
-Featuring luxurious detailing and timeless structure.
-</p>
-
-<p>Multiple Photos</p>
-
-<p>Dimensions</p>
-
-<p>Reviews</p>
-
-<p>Shipping Info</p>
-
-</div>
-
-</section>
-
-<!-- COMMUNITY -->
-
-<section class="section">
-
-<h2>More Than Customers.
-They Are ZAKIÉLLES.</h2>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact" class="section">
-
-<h2>Contact</h2>
-
-<div class="info-box">
-
-<p>Instagram</p>
-
-<p>WhatsApp Support</p>
-
-<p>Track Your Order</p>
-
-<p>Customer Login</p>
-
-<p>Founder of ZAKIÈRA</p>
-
-</div>
-
-</section>
-```
-
 </body>
 </html>
-```
